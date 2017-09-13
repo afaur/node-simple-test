@@ -2,7 +2,7 @@
   // Need for finding/checking files/directories
   const [fs, path] = [require('fs'), require('path')]
 
-  // Blacklist this file (`index.js`) and `old` folder
+  // Blacklist this test framework folder
   const blist = RegExp('.testFramework')
 
   // Find files (in test folder but not on blist) and require them, return test results

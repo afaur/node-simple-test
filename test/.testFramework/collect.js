@@ -1,9 +1,11 @@
-module.exports = (R, f, { pass, fail }) => {
+// Takes D(ata), R(elative) P(ath) (to) F(ile), and data from test runs
+// Adds the information from the test runs to the D(ata)
+module.exports = (D, RPF, { pass, fail }) => {
   // Track the total amount of passed and failed tests
-  R.pass.total = R.pass.total + pass.total
-  R.fail.total = R.fail.total + fail.total
+  D.pass.total = D.pass.total + pass.total
+  D.fail.total = D.fail.total + fail.total
 
   // Track all individual test details with the filename
-  R.pass.each.push({ filename: f, details: pass.details })
-  R.fail.each.push({ filename: f, details: fail.details })
+  D.pass.each.push({ filename: RPF, details: pass.details })
+  D.fail.each.push({ filename: RPF, details: fail.details })
 }
