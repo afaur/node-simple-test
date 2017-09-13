@@ -1,0 +1,11 @@
+{
+  "name": "simple-test-example",
+  "version": "0.0.1",
+  "description": "Project example using a simple testing framework.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --trace-warnings --require './test/.testFramework'",
+    "start": "node --trace-warnings src/index.js"
+  },
+  "license": "Unlicense"
+}
