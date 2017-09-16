@@ -6,7 +6,7 @@ const T = {
 }
 
 for (let C in T) {
-  module.exports[C] = function (T, C, s) {
-    return T[C].replace(/__TEXT/, s)
-  }.bind(null, T, C)
+  module.exports[C] = (
+    (T,C) => (s => T[C].replace(/__TEXT/, s))
+  )(T,C)
 }
